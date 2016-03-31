@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+
+Name: mainlayer
+Specification-Title: Java and Spring based HealthApp MainLayer
+Specification-Version: 1.0-938-gf38da59
+Specification-Vendor: ProjectVision Inc.
+
