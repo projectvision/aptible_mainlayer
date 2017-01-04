@@ -12,10 +12,12 @@ RUN apt-get install -y vim
 COPY mainlayer /usr/local/tomcat/webapps/mainlayer
 COPY server.xml /usr/local/tomcat/conf/
 COPY tomcat-stdout-accesslog-0.2.jar /usr/local/tomcat/lib/
-COPY mainlayerOverride.properties /usr/local/tomcat/webapps/mainlayer/WEB-INF/classes/
+# COPY mainlayerOverride.properties /usr/local/tomcat/webapps/mainlayer/WEB-INF/classes/
 
 RUN rm -f /usr/local/tomcat/webapps/mainlayer/WEB-INF/classes/log4j2.xml
 COPY log4j2.xml /usr/local/tomcat/webapps/mainlayer/WEB-INF/classes/
 
 #Copy the ROOT webapp to correct location
 COPY ROOT /usr/local/tomcat/webapps/ROOT
+
+COPY env.sh /usr/bin/
