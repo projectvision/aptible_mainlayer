@@ -11,5 +11,12 @@ Copyright (c) 2016 Project Vision Inc.
 <!DOCTYPE html>
 <%@ page session="false" %>
 <%
-response.sendRedirect("https://app-2736.on-aptible.com/mainlayer/clinician/index.html");
+
+String mainAddress = "https://app-2736.on-aptible.com/mainlayer/clinician/index.html";
+
+if (null != System.getenv("MAIN_ADDRESS")) {
+  mainAddress = System.getenv("MAIN_ADDRESS");
+}
+
+response.sendRedirect(mainAddress);
 %>
